@@ -5,7 +5,7 @@ export const Ruter =[
     {
         title: 'Inicio',
         className: 'textA',
-        path: '/',
+        path: '/Home',
         icon: <FaHome />,
         cName: 'text'
 

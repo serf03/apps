@@ -1,10 +1,8 @@
 import React from 'react';
 import '../styles/css/Home.css';
 import {Ruter} from './Ruter';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import {IconContext} from 'react-icons';
-
-
 
 export default function(){
     return(
@@ -14,19 +12,11 @@ export default function(){
                 <section>
                     {Ruter.map((item, index) =>{
                         return(
-                            <li key={index} className={item.className}>
-
-                                <span>{item.title}</span>
-                            <li key={index} className={item.cName}>
-                                <Link to={item. path}>
+                            <Link to={item.path} key={index} className={item.cName}>
                                     {item.icon}
-                                </Link>
-                            </li>
-
-                            </li>
+                            </Link>
                         )
                     })}
-                   
                 </section>
             </div>
         </IconContext.Provider>
